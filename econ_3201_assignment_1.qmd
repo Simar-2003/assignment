@@ -83,22 +83,15 @@ An important note is that after writing a command, put a space after the command
 
 Re-write the following equations in LaTeX. 
 
-(a) $$
-E(Y) = y_1 p_1 + \dots + y_k p_k = \sum_{i=1}^k y_i p_i
-$$
-(b) $$
-\sigma_Y = \operatorname{Var}(Y) = E\big[(Y-\mu_y)^2\big] = \sum_{i=1}^k (y_i-\mu_y)^2 p_i
-$$
-(c) $$
-\hat\beta = \frac{\sum_{i=1}^n (y_i-\bar y)(x_i-\bar x)}{\sum_{i=1}^n (x_i-\bar x)^2}
-$$
-(d) $$
-P(a\le Y \le b) = \int_a^b f_Y(y)\,dy
-$$
-(e) $$
-\hat g(x) = \frac{\frac{1}{n h}\sum_{i=1}^n y_i\,k\!\left(\frac{x_i-x}{h}\right)}
-{\frac{1}{n h}\sum_{i=1}^n k\!\left(\frac{x_i-x}{h}\right)}
-$$
+(a) $E(Y)=y_{1}p_{1}+...+y_{k}p_{k}=\sum_{i=1}^k y_{i}p_{i}$
+
+(b) $\sigma_{Y}=Var(Y)= E[(Y-\mu_y)^2]=\sum_{i=1}^k(y_i-\mu_y)^2p_i$
+
+(c) $\hat{\beta}=\frac{\sum_{i=1}^n(y-y_i)(x-x_i)}{\sum_{i=1}^n(x-x_i)2}$
+
+(d) $P(a\leq Y \leq b)=\int_{a}^{b}f_Y(y)dy$
+
+(e) $\hat{g}(x)=\frac{\frac{1}{nh}\sum_{i=1}^ny_ik(\frac{x_i-x}{h})}{\frac{1}{nh}\sum_{i=1}^n     k(\frac{x_i-x}{h})}$
 
   
 # 3. R
@@ -115,8 +108,8 @@ n <-1000
 (b) Generate two random variables, $u_1\sim U(0,1)$ and $u_2\sim U(0,1)$ with $n/2=500$ observations. That is, create two variables that follow a uniform distribution between 0 and 1 that each have 500 observations. In R, we can create random uniform variables using the `runif(k,min,max)` function, where `k` is number of observations, `min` is the minimum value, and `max` is the maximum value. The default values for `min` and `max` are 0 and 1, respectively. Type `?runif` into your console to learn more.
 
 ```{r}
-u1 <- runif(n/2, min = 0, max = 1)   # uniform random numbers between 0 and 1
-u2 <- runif(n/2, min = 0, max = 1)   # uniform random numbers between 0 and 1
+u1 <- runif(n/2,0,1)   # min-0, max-1, length-500
+u2 <- runif(n/2,0,1)   # min-0, max-1, length-500
 ```
 
 
@@ -303,6 +296,6 @@ col = "red")
     
     (iii) Cross reference the figure and add the text "Figure 1 shows the fuel efficiency for city driving versus highway driving". 
 
-Figure 1 shows the Fuel efficiency for city driving versus highway driving
+   Figure (1) shows the Fuel efficiency for city driving versus highway driving.
     
  
